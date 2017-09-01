@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :vendor_id %><br>
-    <%= f.text_field :vendor_id %>
+    <%= f.select :vendor_id, Vendor.all.pluck(:name, :id) %>
   </div>
   <div class="field">
     <%= f.label :name %><br>

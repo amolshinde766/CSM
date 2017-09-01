@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :item_id %><br>
-    <%= f.text_field :item_id %>
+    <%= f.select :item_id, Item.all.pluck(:name, :id) %>
   </div>
   <div class="field">
     <%= f.label :customer_id %><br>
-    <%= f.text_field :customer_id %>
+    <%= f.select :customer_id, Customer.all.pluck(:name, :id) %>
   </div>
   <div class="actions">
     <%= f.submit %>
