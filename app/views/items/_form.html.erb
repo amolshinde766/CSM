@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :vendor_id %><br>
-    <%= f.select :vendor_id, Vendor.all.pluck(:name, :id) %>
+    <%= f.select :vendor_id, Vendor.all.pluck(:name, :id),{include_blank: "Select vendor"} %>
   </div>
   <div class="field">
     <%= f.label :name %><br>

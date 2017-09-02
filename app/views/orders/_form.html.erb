@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :item_id %><br>
-    <%= f.select :item_id, Item.all.pluck(:name, :id) %>
+    <%= f.select :item_id, Item.all.pluck(:name, :id),{include_blank: "Select item"}  %>
   </div>
   <div class="field">
     <%= f.label :customer_id %><br>
-    <%= f.select :customer_id, Customer.all.pluck(:name, :id) %>
+    <%= f.select :customer_id, Customer.all.pluck(:name, :id),{include_blank: "Select customer"}  %>
   </div>
   <div class="actions">
     <%= f.submit %>
