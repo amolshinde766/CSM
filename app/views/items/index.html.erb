@@ -4,7 +4,7 @@
 <%= link_to "Customers", customers_path %>
 <h1>Listing Items</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Id</th>
@@ -13,7 +13,7 @@
       <th>Price</th>
       <th>Quantity</th>
       <th>Total price</th>
-      <th colspan="3"></th>
+      <th colspan="3">Links</th>
     </tr>
   </thead>
 
@@ -33,7 +33,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Item', new_item_path %>
