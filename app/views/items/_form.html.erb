@@ -28,9 +28,19 @@
     <%= f.number_field :quantity %>
   </div>
   <div class="field">
-    <%= f.hidden_field :total_price %>
+    <%= f.label :total_price %><br>
+    <%= f.text_field :total_price %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+   document.getElementById("item_price").addEventListener("input", myFunction);
+   document.getElementById("item_quantity").addEventListener("input", myFunction);
+   function myFunction() 
+   {
+     document.getElementById("item_total_price").value = parseInt(document.getElementById("item_price").value * parseInt(document.getElementById("item_quantity").value));
+   }
+</script>
