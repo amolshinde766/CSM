@@ -41,7 +41,12 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1.json
   def update
     respond_to do |format|
+      puts params[:item][:price].to_i
+      puts params[:item][:quantity].to_i
+      price = params[:item][:price].to_i * params[:item][:quantity].to_i
+      puts @item.total_price
       if @item.update(item_params)
+        @item.update(total_price: price)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
